@@ -1,0 +1,29 @@
+{
+  "name": "webpack-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xavianaxw/webpack-starter.git"
+  },
+  "keywords": [
+    "webpack-starter",
+    "webpack",
+    "es6",
+    "scss"
+  ],
+  "author": "Xavian Ang (xavianaxw@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xavianaxw/webpack-starter/issues"
+  },
+  "homepage": "https://github.com/xavianaxw/webpack-starter#readme",
+  "devDependencies": {
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
+  }
+}
