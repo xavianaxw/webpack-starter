@@ -1,9 +1,12 @@
 @import 'modules/colors';
 
-body { text-align: center; }
-
-h1 { color: $primary; }
-
 img {
-  max-width: 100%;
+  max-width: 80%;
+}
+
+.centered {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
