@@ -31,7 +31,21 @@ module.exports = {
       {
         test: /\.scss$/,
         use: extractCss.extract({
-          use: ['css-loader', 'sass-loader'],
+          use: [
+            'css-loader',
+            {
+              loader: 'postcss-loader',
+              options: {
+                plugins: (loader) => {
+                  return [
+                    require('autoprefixer')(),
+                    require('cssnano')(),
+                  ];
+                }
+              }
+            },
+            'sass-loader'
+          ],
           fallback: 'style-loader',
         }),
       },
