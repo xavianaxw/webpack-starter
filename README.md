@@ -3,13 +3,17 @@ Webpack starter to get you rolling with ES6 + SCSS so you can start cracking awa
 
 ## How to start
 
+Install
+
+`npm install`
+
 Development
 
-```npm run dev```
+`npm run dev`
 
 Production
 
-```npm run production```
+`npm run production`
 
 
 ## Features
