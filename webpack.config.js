@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const extractCss = new ExtractTextPlugin({
   // filename: "[name].[contenthash].css",
@@ -13,7 +14,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: 'bundle.js',
-    publicPath: 'public/'
+    // publicPath: 'public/'
   },
   module: {
     rules: [
@@ -32,10 +33,27 @@ module.exports = {
           use: ['css-loader', 'sass-loader'],
           fallback: 'style-loader',
         }),
+      },
+      {
+        test: /\.(jpg|png)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'images/',
+          }
+        }
+      },
+      {
+        test: /\.html$/,
+        use: ['html-loader'],
       }
     ]
   },
   plugins: [
     extractCss,
+    new HtmlWebpackPlugin({
+      template: 'src/index.html',
+    }),
   ],
 }
