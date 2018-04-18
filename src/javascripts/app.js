@@ -1,6 +1,9 @@
 import '../stylesheets/app.scss';
 
-import { Printer } from './modules/printer';
+import React from "react";
+import { render } from "react-dom";
 
-const printerObj = new Printer();
-printerObj.message('hello world');
+// components
+import App from "./components/App";
+
+render(<App/>, document.querySelector("#App"));
